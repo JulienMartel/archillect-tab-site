@@ -1,7 +1,12 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera, Html, useProgress } from "@react-three/drei";
+import {
+  PerspectiveCamera,
+  Html,
+  useProgress,
+  Preload,
+} from "@react-three/drei";
 import { Suspense, useState } from "react";
 import { motion as motion3d } from "framer-motion-3d";
 import { motion } from "framer-motion";
@@ -9,7 +14,7 @@ import { Model } from "./model";
 
 function Loader() {
   const { progress } = useProgress();
-  return <Html center>{progress} % loaded</Html>;
+  return <Html center>{progress.toFixed(0)} % loaded</Html>;
 }
 
 export function Phone() {
@@ -17,12 +22,13 @@ export function Phone() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 0.5 }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ duration: 1, delay: 0.5 }}
       className="h-full w-full"
     >
-      <Canvas className="h-full w-full">
+      <Canvas className="relative h-full w-full bg-black">
+        <Preload all />
         <PerspectiveCamera makeDefault position={[0, 0, 0.25]} />
         <ambientLight intensity={0.8} />
         <spotLight

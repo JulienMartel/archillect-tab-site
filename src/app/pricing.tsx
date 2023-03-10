@@ -1,6 +1,14 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export function Pricing() {
   return (
-    <div className="grid h-min w-full place-items-center lg:w-1/3">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="grid h-min w-full place-items-center lg:w-1/3"
+    >
       <div className="mx-auto w-full rounded-2xl bg-neutral-900 px-6 py-7">
         <h3 className="text-xl font-bold">Full Access</h3>
 
@@ -33,7 +41,7 @@ export function Pricing() {
           <Li>Cancel anytime</Li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
