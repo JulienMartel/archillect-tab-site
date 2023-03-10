@@ -1,91 +1,60 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Footer } from "./footer";
+import { Logo } from "./logo";
+import { Phone } from "./(phone)/phone";
+import { Pricing } from "./pricing";
+import { Testimonials } from "./testimonials";
+import Script from "next/script";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
+    <main className="mx-auto max-w-screen-lg p-4">
+      <Script
+        src="https://gumroad.com/js/gumroad.js"
+        // onLoad={() => console.log("Script has loaded")} would have to be client component + jotai ?
+      />
+
+      <section className="my-12">
+        <Logo />
+
+        <h1 className="my-6 px-6 text-center text-2xl font-semibold leading-7">
+          Sync your iPhone lock screen with Archillect&apos;s most recent image.
+        </h1>
+
+        <nav className="my-6 flex justify-center gap-x-2.5">
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="https://jubag.gumroad.com/l/aw"
+            data-gumroad-overlay-checkout="true"
             target="_blank"
-            rel="noopener noreferrer"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+            <button className="inline-flex h-10 items-center justify-center rounded-3xl bg-neutral-100 py-2 px-5 font-semibold text-black transition-colors hover:bg-neutral-300 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 active:scale-95 data-[state=open]:bg-neutral-800">
+              Get key
+            </button>
           </a>
-        </div>
-      </div>
+          <a
+            href="https://occipital-sunscreen-08f.notion.site/Archillect-wallpaper-instructions-62b3d98263fc4b4aa2494b229f53658b"
+            target="_blank"
+          >
+            <button className="inline-flex h-10 items-center justify-center rounded-3xl bg-neutral-800 py-2 px-5 font-semibold text-neutral-100 transition-colors hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-700 focus:ring-offset-2 active:scale-95 data-[state=open]:bg-neutral-800">
+              Instructions
+            </button>
+          </a>
+        </nav>
+      </section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+      <section className="my-12 mb-24 flex flex-col items-center space-y-2 md:flex-row md:space-x-2 md:space-y-0 lg:my-24">
+        <figure className="h-[500px] w-full lg:aspect-square lg:h-full lg:w-2/3">
+          <Phone />
+        </figure>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <Pricing />
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+      <section>
+        <h2 className="text-center text-xl font-semibold">Wall of love 🤍</h2>
+        <Testimonials />
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Footer />
     </main>
-  )
+  );
 }
