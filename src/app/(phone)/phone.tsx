@@ -17,14 +17,14 @@ function Loader() {
 
   return (
     <Html center>
-      <div className="w-10 bg-neutral-700">
-        <div
-          className={`h-3 rounded-full bg-neutral-300 text-white w-[${progress.toFixed(
+      <div className="w-10 bg-neutral-700 text-white">
+        {/* <div
+          className={`h-3 rounded-full bg-neutral-300 w-[${progress.toFixed(
             0
           )}%]`}
-        >
-          {progress.toFixed(0)}
-        </div>
+        > */}
+        {progress.toFixed(0)}
+        {/* </div> */}
       </div>
     </Html>
   );
