@@ -7,26 +7,42 @@ import {
   useProgress,
   Preload,
 } from "@react-three/drei";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { motion as motion3d } from "framer-motion-3d";
-import { motion } from "framer-motion";
+import { animate, motion, useMotionValue, useSpring } from "framer-motion";
 import { Model } from "./model";
 
 function Loader() {
   const { progress } = useProgress();
-  return <Html center>{progress.toFixed(0)} % loaded</Html>;
+
+  return (
+    <Html center>
+      <div className="w-10 bg-neutral-700">
+        <div
+          className={`h-1 rounded-full bg-neutral-300 w-[${progress.toFixed(
+            0
+          )}%]`}
+        />
+      </div>
+    </Html>
+  );
 }
 
 export function Phone() {
   const [spinBool, setSpinBool] = useState(false);
 
+  const { loaded } = useProgress();
+
+  const opacity = useSpring(0);
+
+  useEffect(() => {
+    if (loaded) {
+      animate(opacity, 1, { duration: 1 });
+    }
+  }, [loaded, opacity]);
+
   return (
-    <motion.div
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // transition={{ duration: 1, delay: 0.5 }}
-      className="h-full w-full"
-    >
+    <motion.div style={{ opacity }} className="h-full w-full">
       <Canvas className="relative h-full w-full bg-black">
         <Preload all />
         <PerspectiveCamera makeDefault position={[0, 0, 0.25]} />
@@ -41,7 +57,7 @@ export function Phone() {
           <motion3d.group
             initial={{ rotateY: 0 }}
             animate={{ rotateY: Math.PI }}
-            transition={{ type: "spring", duration: 1 }}
+            transition={{ type: "spring", duration: 1, delay: 0.2 }}
             whileHover={{
               rotateY: Math.PI * (spinBool ? -1 : 1) - Math.PI / 16,
               rotateX: 0 - Math.PI / 24,
