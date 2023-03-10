@@ -19,7 +19,7 @@ function Loader() {
     <Html center>
       <div className="w-10 bg-neutral-700">
         <div
-          className={`h-1 rounded-full bg-neutral-300 w-[${progress.toFixed(
+          className={`h-3 rounded-full bg-neutral-300 text-white w-[${progress.toFixed(
             0
           )}%]`}
         >
@@ -59,7 +59,7 @@ export function Phone() {
           <motion3d.group
             initial={{ rotateY: 0 }}
             animate={{ rotateY: Math.PI }}
-            transition={{ type: "spring", duration: 1, delay: 0.3 }}
+            transition={{ type: "spring" }}
             whileHover={{
               rotateY: Math.PI * (spinBool ? -1 : 1) - Math.PI / 16,
               rotateX: 0 - Math.PI / 24,
