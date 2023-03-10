@@ -17,15 +17,15 @@ function Loader() {
 
   return (
     <Html center>
-      <div className="w-10 bg-neutral-700 text-white">
-        {/* <div
+      {/* <div className="w-10 bg-neutral-700 text-white"> */}
+      {/* <div
           className={`h-3 rounded-full bg-neutral-300 w-[${progress.toFixed(
             0
           )}%]`}
         > */}
-        {progress.toFixed(0)}
-        {/* </div> */}
-      </div>
+      {progress.toFixed(0)} loaded
+      {/* </div> */}
+      {/* </div> */}
     </Html>
   );
 }
@@ -46,7 +46,7 @@ export function Phone() {
   return (
     <motion.div style={{ opacity }} className="h-full w-full">
       <Canvas className="relative h-full w-full bg-black">
-        <Preload all />
+        {/* <Preload all /> */}
         <PerspectiveCamera makeDefault position={[0, 0, 0.25]} />
         <ambientLight intensity={0.8} />
         <spotLight
@@ -59,7 +59,7 @@ export function Phone() {
           <motion3d.group
             initial={{ rotateY: 0 }}
             animate={{ rotateY: Math.PI }}
-            transition={{ type: "spring" }}
+            transition={{ type: "spring", duration: 1 }}
             whileHover={{
               rotateY: Math.PI * (spinBool ? -1 : 1) - Math.PI / 16,
               rotateX: 0 - Math.PI / 24,
