@@ -9,7 +9,7 @@ import {
 } from "@react-three/drei";
 import { Suspense, useEffect, useState } from "react";
 import { motion as motion3d } from "framer-motion-3d";
-import { animate, motion, useMotionValue, useSpring } from "framer-motion";
+import { animate, motion, useSpring } from "framer-motion";
 import { Model } from "./model";
 
 function Loader() {
@@ -22,7 +22,9 @@ function Loader() {
           className={`h-1 rounded-full bg-neutral-300 w-[${progress.toFixed(
             0
           )}%]`}
-        />
+        >
+          {progress.toFixed(0)}
+        </div>
       </div>
     </Html>
   );
@@ -57,7 +59,7 @@ export function Phone() {
           <motion3d.group
             initial={{ rotateY: 0 }}
             animate={{ rotateY: Math.PI }}
-            transition={{ type: "spring", duration: 1, delay: 0.2 }}
+            transition={{ type: "spring", duration: 1, delay: 0.3 }}
             whileHover={{
               rotateY: Math.PI * (spinBool ? -1 : 1) - Math.PI / 16,
               rotateX: 0 - Math.PI / 24,

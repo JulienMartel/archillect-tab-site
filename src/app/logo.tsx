@@ -1,11 +1,11 @@
 export function Logo() {
   return (
-    <div className="mx-auto bg-neutral-100 w-12 h-12 grid place-items-center rounded-xl">
+    <div className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-neutral-100">
       <svg
         viewBox="0 0 119 117"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-3/5 h-3/5"
+        className="h-7 w-7"
       >
         <g filter="url(#filter0_d_515_11)">
           <path d="M44 23H28V87H44V23Z" fill="black" />
