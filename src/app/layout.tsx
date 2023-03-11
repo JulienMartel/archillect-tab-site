@@ -38,13 +38,13 @@ export const metadata = {
       "Sync your iPhone lock screen with Archillect's most recent image.",
     creator: "@JU3AG",
     creatorId: "1035428482115940353",
-    images: ["/metadata/twitter-card.png"], // try og.png
+    images: ["/metadata/og.png"],
   },
   openGraph: {
     title: "Auto Archillect Wallpapers",
     description:
       "Sync your iPhone lock screen with Archillect's most recent image.",
-    url: "https://jubag.dev",
+    url: "https://aw.jubag.dev",
     siteName: "Auto Archillect Wallpapers",
     images: {
       url: "/metadata/og.png",
