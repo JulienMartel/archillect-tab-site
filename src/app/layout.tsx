@@ -2,10 +2,9 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 export const metadata = {
-  title: "Archillect Wallpaper",
+  title: "Auto Archillect Wallpapers",
   description:
     "Sync your iPhone lock screen with Archillect's most recent image.",
-  applicationName: "Archillect Wallpaper",
   keywords: [
     "Archillect",
     "Wallpaper",
@@ -32,7 +31,6 @@ export const metadata = {
     apple: { url: "/metadata/apple-touch-icon.png", sizes: "180x180" },
   },
 
-  //todo
   twitter: {
     card: "summary_large_image",
     title: "Auto Archillect Wallpapers",
@@ -40,29 +38,22 @@ export const metadata = {
       "Sync your iPhone lock screen with Archillect's most recent image.",
     creator: "@JU3AG",
     creatorId: "1035428482115940353",
-    images: ["/metadata/twitter-card.png"],
+    images: ["/metadata/twitter-card.png"], // try og.png
   },
-  // openGraph: {
-  //   title: "Next.js",
-  //   description: "The React Framework for the Web",
-  //   url: "https://nextjs.org",
-  //   siteName: "Next.js",
-  //   images: [
-  //     {
-  //       url: "https://nextjs.org/og.png",
-  //       width: 800,
-  //       height: 600,
-  //     },
-  //     {
-  //       url: "https://nextjs.org/og-alt.png",
-  //       width: 1800,
-  //       height: 1600,
-  //       alt: "My custom alt",
-  //     },
-  //   ],
-  //   locale: "en-US",
-  //   type: "website",
-  // },
+  openGraph: {
+    title: "Auto Archillect Wallpapers",
+    description: "The React Framework for the Web",
+    url: "https://aw.jubag.dev",
+    siteName: "Auto Archillect Wallpapers",
+    images: {
+      url: "/og.png",
+      width: 1200,
+      height: 630,
+    },
+
+    locale: "en-US",
+    type: "website",
+  },
 };
 
 const inter = Inter({
