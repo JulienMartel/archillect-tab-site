@@ -42,11 +42,12 @@ export const metadata = {
   },
   openGraph: {
     title: "Auto Archillect Wallpapers",
-    description: "The React Framework for the Web",
-    url: "https://aw.jubag.dev",
+    description:
+      "Sync your iPhone lock screen with Archillect's most recent image.",
+    url: "https://jubag.dev",
     siteName: "Auto Archillect Wallpapers",
     images: {
-      url: "/og.png",
+      url: "/metadata/og.png",
       width: 1200,
       height: 630,
     },
