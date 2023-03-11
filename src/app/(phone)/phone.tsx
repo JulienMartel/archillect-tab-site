@@ -7,9 +7,8 @@ import {
   useProgress,
   Preload,
 } from "@react-three/drei";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { motion as motion3d } from "framer-motion-3d";
-import { animate, motion, useSpring } from "framer-motion";
 import { Model } from "./model";
 
 function Loader() {
@@ -27,18 +26,8 @@ function Loader() {
 export function Phone() {
   const [spinBool, setSpinBool] = useState(false);
 
-  const { loaded } = useProgress();
-
-  const opacity = useSpring(0);
-
-  useEffect(() => {
-    if (loaded) {
-      animate(opacity, 1, { duration: 1 });
-    }
-  }, [loaded, opacity]);
-
   return (
-    <motion.div style={{ opacity }} className="h-full w-full">
+    <div className="h-full w-full">
       <Canvas className="relative h-full w-full bg-black">
         <Preload all />
         <PerspectiveCamera makeDefault position={[0, 0, 0.25]} />
@@ -53,9 +42,9 @@ export function Phone() {
           <motion3d.group
             initial={{ rotateY: 0 }}
             animate={{ rotateY: Math.PI }}
-            transition={{ type: "spring", duration: 1 }}
+            transition={{ type: "spring", duration: 1, delay: 0.01 }}
             whileHover={{
-              rotateY: Math.PI * (spinBool ? -1 : 1) - Math.PI / 16,
+              rotateY: Math.PI - Math.PI / 16,
               rotateX: 0 - Math.PI / 24,
               rotateZ: Math.PI / 36,
               x: 0.002,
@@ -73,6 +62,6 @@ export function Phone() {
           </motion3d.group>
         </group>
       </Canvas>
-    </motion.div>
+    </div>
   );
 }
