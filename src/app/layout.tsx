@@ -33,17 +33,15 @@ export const metadata = {
   },
 
   //todo
-  // get the right sizes from spline img/vid
-
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "Next.js",
-  //   description: "The React Framework for the Web",
-  //   siteId: "1467726470533754880",
-  //   creator: "@nextjs",
-  //   creatorId: "1467726470533754880",
-  //   images: ["https://nextjs.org/og.png"],
-  // },
+  twitter: {
+    card: "summary_large_image",
+    title: "Auto Archillect Wallpapers",
+    description:
+      "Sync your iPhone lock screen with Archillect's most recent image.",
+    creator: "@JU3AG",
+    creatorId: "1035428482115940353",
+    images: ["/metadata/twitter-card.png"],
+  },
   // openGraph: {
   //   title: "Next.js",
   //   description: "The React Framework for the Web",

@@ -4,7 +4,7 @@ export function Pricing() {
       <div className="mx-auto w-full rounded-2xl bg-neutral-900 px-6 py-7">
         <h3 className="text-xl font-bold">Full Access</h3>
 
-        <p className="text-neutral-500">Free 1 week trial included.</p>
+        <p className="text-neutral-400">Free 1 week trial included.</p>
 
         <p className="mt-2.5 mb-4 inline-block rounded-full bg-neutral-700 px-3 py-1 font-bold">
           $3 / month
