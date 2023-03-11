@@ -6,21 +6,21 @@ import { motion } from "framer-motion";
 export function Testimonials() {
   const testimonials = [
     {
-      avatar: "/gritcult.jpg",
+      avatar: "/testimonials/gritcult.jpg",
       name: "@GRITCULT",
       source: "Twitter",
       message: "I have this on my iPhone and it’s lit",
       icon: <TwitterIcon />,
     },
     {
-      avatar: "/farza.jpg",
+      avatar: "/testimonials/farza.jpg",
       name: "@FarzaTV",
       source: "Twitter",
       message: "i like it -- super simple ship :)!",
       icon: <TwitterIcon />,
     },
     {
-      avatar: "/bmac.webp",
+      avatar: "/testimonials/bmac.webp",
       name: "Anonymous",
       source: "Buy Me a Coffee",
       message:
@@ -28,41 +28,41 @@ export function Testimonials() {
       icon: <DollarIcon />,
     },
     {
-      avatar: "/bmac.webp",
+      avatar: "/testimonials/bmac.webp",
       name: "marshall",
       source: "Buy Me a Coffee",
       message: "i love it so much. thank u. been using for years",
       icon: <DollarIcon />,
     },
     {
-      avatar: "/jackson.webp",
+      avatar: "/testimonials/jackson.webp",
       name: "Jackson Burgess",
       source: "Chrome Web Store",
       message: "Its valid",
       icon: <Rating rating={5} />,
     },
     {
-      avatar: "/yj.webp",
+      avatar: "/testimonials/yj.webp",
       name: "YJ Ang",
       source: "Chrome Web Store",
       message: "Thank you for making this extension!",
       icon: <Rating rating={5} />,
     },
     {
-      avatar: "/caleb.webp",
+      avatar: "/testimonials/caleb.webp",
       name: "Caleb Rudnick",
       source: "Chrome Web Store",
       message: "This is awesome - thank you for making it!",
       icon: <Rating rating={5} />,
     },
     {
-      avatar: "/ahan.webp",
+      avatar: "/testimonials/ahan.webp",
       name: "Ahan Madhur",
       source: "Chrome Web Store",
       icon: <Rating rating={3} />,
     },
     {
-      avatar: "/ziro.webp",
+      avatar: "/testimonials/ziro.webp",
       name: "ziro",
       source: "Chrome Web Store",
       message:

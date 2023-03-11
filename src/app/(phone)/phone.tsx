@@ -40,7 +40,7 @@ export function Phone() {
   return (
     <motion.div style={{ opacity }} className="h-full w-full">
       <Canvas className="relative h-full w-full bg-black">
-        {/* <Preload all /> */}
+        <Preload all />
         <PerspectiveCamera makeDefault position={[0, 0, 0.25]} />
         <ambientLight intensity={0.8} />
         <spotLight
