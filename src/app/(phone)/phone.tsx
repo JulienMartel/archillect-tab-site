@@ -17,15 +17,9 @@ function Loader() {
 
   return (
     <Html center>
-      {/* <div className="w-10 bg-neutral-700 text-white"> */}
-      {/* <div
-          className={`h-3 rounded-full bg-neutral-300 w-[${progress.toFixed(
-            0
-          )}%]`}
-        > */}
-      {progress.toFixed(0)} loaded
-      {/* </div> */}
-      {/* </div> */}
+      <div className="w-36 overflow-hidden rounded-full bg-neutral-700">
+        <div className={`h-3 bg-neutral-100 w-[${progress.toFixed(0)}%]`}></div>
+      </div>
     </Html>
   );
 }

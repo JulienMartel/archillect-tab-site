@@ -103,7 +103,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Model(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/phone.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF("/compressed.glb") as GLTFResult;
 
   const [hovered, setHovered] = useState(false);
   useEffect(() => {

@@ -5,6 +5,8 @@ import { Pricing } from "./pricing";
 import { Testimonials } from "./testimonials";
 import Script from "next/script";
 
+export const revalidate = 0;
+
 export default function Home() {
   return (
     <main className="mx-auto max-w-screen-lg p-4">
