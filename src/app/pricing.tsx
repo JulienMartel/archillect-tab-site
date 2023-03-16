@@ -11,8 +11,7 @@ export function Pricing() {
         </p>
 
         <a
-          href="https://jubag.gumroad.com/l/aw"
-          data-gumroad-overlay-checkout="true"
+          href="https://jubag.gumroad.com/l/aw?ref=landing-page"
           target="_blank"
         >
           <button className="flex h-10 w-full items-center justify-center rounded-md bg-neutral-100 py-2 px-5 font-semibold text-black transition-colors hover:bg-neutral-300 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 data-[state=open]:bg-neutral-800">

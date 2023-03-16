@@ -5,8 +5,6 @@ import { Pricing } from "./pricing";
 import { Testimonials } from "./testimonials";
 import Script from "next/script";
 
-export const revalidate = 0;
-
 export default function Home() {
   return (
     <main className="mx-auto max-w-screen-lg p-4">
@@ -24,8 +22,7 @@ export default function Home() {
 
         <nav className="my-6 flex justify-center gap-x-2.5">
           <a
-            href="https://jubag.gumroad.com/l/aw"
-            data-gumroad-overlay-checkout="true"
+            href="https://jubag.gumroad.com/l/aw?ref=landing-page"
             target="_blank"
           >
             <button className="inline-flex h-10 items-center justify-center rounded-3xl bg-neutral-100 py-2 px-5 font-semibold text-black transition-colors hover:bg-neutral-300 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 active:scale-95 data-[state=open]:bg-neutral-800">
