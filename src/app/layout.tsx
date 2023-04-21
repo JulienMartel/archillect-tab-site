@@ -36,8 +36,8 @@ export const metadata = {
     title: "Auto Archillect Wallpapers",
     description:
       "Sync your iPhone lock screen with Archillect's most recent image.",
-    // creator: "@JU3AG",
-    // creatorId: "1035428482115940353",
+    creator: "@JU3AG",
+    creatorId: "1035428482115940353",
     images: {
       url: "/metadata/twitter-card.png",
       alt: "Auto Archillect Wallpapers",
@@ -49,11 +49,13 @@ export const metadata = {
       "Sync your iPhone lock screen with Archillect's most recent image.",
     url: "https://aw.jubag.dev",
     siteName: "Auto Archillect Wallpapers",
-    images: {
-      url: "/metadata/og.png",
-      width: 1200,
-      height: 630,
-    },
+    images: [
+      {
+        url: "/metadata/og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
 
     locale: "en-US",
     type: "website",
