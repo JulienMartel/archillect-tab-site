@@ -17,11 +17,11 @@ export const metadata = {
   ],
   themeColor: "black",
   colorScheme: "dark",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  // formatDetection: {
+  //   email: false,
+  //   address: false,
+  //   telephone: false,
+  // },
   manifest: "/metadata/site.webmanifest",
   icons: {
     icon: [
@@ -38,7 +38,10 @@ export const metadata = {
       "Sync your iPhone lock screen with Archillect's most recent image.",
     // creator: "@JU3AG",
     // creatorId: "1035428482115940353",
-    images: ["/metadata/twitter-card.png"],
+    images: {
+      url: "/metadata/twitter-card.png",
+      alt: "Auto Archillect Wallpapers",
+    },
   },
   openGraph: {
     title: "Auto Archillect Wallpapers",
