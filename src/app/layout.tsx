@@ -22,7 +22,7 @@ export const metadata = {
   //   address: false,
   //   telephone: false,
   // },
-  manifest: "/metadata/site.webmanifest",
+  manifest: "https://aw.jubag.dev/metadata/site.webmanifest",
   icons: {
     icon: [
       { url: "/metadata/favicon-32x32.png", sizes: "32x32" },
@@ -38,10 +38,7 @@ export const metadata = {
       "Sync your iPhone lock screen with Archillect's most recent image.",
     creator: "@JU3AG",
     creatorId: "1035428482115940353",
-    images: {
-      url: "/metadata/twitter-card.png",
-      alt: "Auto Archillect Wallpapers",
-    },
+    images: ["https://aw.jubag.dev/metadata/twitter-card.png"],
   },
   openGraph: {
     title: "Auto Archillect Wallpapers",
@@ -51,7 +48,7 @@ export const metadata = {
     siteName: "Auto Archillect Wallpapers",
     images: [
       {
-        url: "/metadata/og.png",
+        url: "https://aw.jubag.dev/metadata/og.png",
         width: 1200,
         height: 630,
       },
