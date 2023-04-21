@@ -36,9 +36,9 @@ export const metadata = {
     title: "Auto Archillect Wallpapers",
     description:
       "Sync your iPhone lock screen with Archillect's most recent image.",
-    creator: "@JU3AG",
-    creatorId: "1035428482115940353",
-    images: ["/metadata/og.png"],
+    // creator: "@JU3AG",
+    // creatorId: "1035428482115940353",
+    images: ["/metadata/twitter-card.png"],
   },
   openGraph: {
     title: "Auto Archillect Wallpapers",
